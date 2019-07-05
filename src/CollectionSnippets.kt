@@ -1,3 +1,11 @@
+import java.util.*
+
+fun getList(): List<Int> {
+    val arrayList = arrayListOf(1, 5, 2)
+    arrayList.sortWith(Comparator { o1, o2 -> o2 - o1 })
+    return arrayList
+}
+
 
 fun <T, R> Collection<T>.fold(
     initial: R,
@@ -29,4 +37,6 @@ fun main() {
     val product = items.fold(1, Int::times)
 
     println(product)
+
+    println(getList())
 }
