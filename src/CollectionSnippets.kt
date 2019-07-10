@@ -7,7 +7,7 @@ fun getList(): List<Int> {
 }
 
 
-fun <T, R> Collection<T>.fold(
+inline fun <T, R> Collection<T>.fold(
     initial: R,
     combine: (acc: R, nextElement: T) -> R
 ): R {
