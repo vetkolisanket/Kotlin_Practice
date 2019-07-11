@@ -21,6 +21,4 @@ fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
 fun main() {
     println(compare(MyDate(1,1,1), MyDate(2,1,1)))
     println(checkInRange(MyDate(2,1,1), MyDate(1,1,1), MyDate(3,1,1)))
-
-
 }
