@@ -1,3 +1,5 @@
+package operatorOverloading
+
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) {
     //Used for operator overloading, in this case '<'
     operator fun compareTo(other: MyDate): Int = when {
@@ -8,7 +10,6 @@ data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) {
 }
 
 class DateRange(val start: MyDate, val endInclusive: MyDate) {
-    //Used for operator overloading, in this case 'in'
     operator fun contains(item: MyDate): Boolean = start <= item && item <= endInclusive
 }
 

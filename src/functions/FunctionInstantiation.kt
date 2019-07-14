@@ -1,3 +1,5 @@
+package functions
+
 /**
  * Non-literal values of function types with and without receiver are interchangeable, so that the receiver can stand in
  * for the first parameter, and vice versa. For instance, a value of type (A, B) -> C can be passed or assigned where

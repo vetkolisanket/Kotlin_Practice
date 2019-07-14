@@ -1,3 +1,5 @@
+package functions
+
 inline fun inlined(block: () -> Unit) {
     println("before")
     block()

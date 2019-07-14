@@ -1,3 +1,5 @@
+package collections
+
 import java.util.*
 
 fun getList(): List<Int> {
