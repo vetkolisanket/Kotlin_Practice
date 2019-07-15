@@ -1,4 +1,4 @@
-package operatorOverloading
+package conventions
 
 import java.util.*
 

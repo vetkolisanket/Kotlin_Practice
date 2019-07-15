@@ -1,4 +1,4 @@
-package operatorOverloading
+package conventions
 
 data class MyDate2(val year: Int, val month: Int, val dayOfMonth: Int): Comparable<MyDate2> //Needed for .. operator
 {

@@ -1,4 +1,4 @@
-package operatorOverloading
+package conventions
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) {
     //Used for operator overloading, in this case '<'
