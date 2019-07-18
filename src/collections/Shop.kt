@@ -15,3 +15,5 @@ data class Customer(val name: String, val city: City, val orders: List<Order>) {
 }
 
 data class Shop(val name: String, val customers: List<Customer>)
+
+fun Shop.getSetOfCustomers(): Set<Customer> = customers.toSet()
