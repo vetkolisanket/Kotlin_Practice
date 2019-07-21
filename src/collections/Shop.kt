@@ -56,3 +56,6 @@ fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? = customers.maxBy { i
 
 //Return the most expensive product which has been ordered
 fun Customer.getMostExpensiveOrderedProduct(): Product? = orders.flatMap { it.products }.maxBy { it.price }
+
+//Return a list of customers, sorted by the ascending number of orders they made
+fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer> = customers.sortedBy { it.orders.size }
