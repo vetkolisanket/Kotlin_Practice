@@ -52,14 +52,18 @@ val Shop.allOrderedProducts: Set<Product> get() {
 }
 
 //Return a customer whose order count is the highest among all customers
+//Others: max, min, maxBy, minBy
 fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? = customers.maxBy { it.orders.size }
 
 //Return the most expensive product which has been ordered
+//Others: max, min, maxBy, minBy
 fun Customer.getMostExpensiveOrderedProduct(): Product? = orders.flatMap { it.products }.maxBy { it.price }
 
 //Return a list of customers, sorted by the ascending number of orders they made
+//Others: sorted
 fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer> = customers.sortedBy { it.orders.size }
 
 //Return the sum of prices of all products that a customer has ordered
 //Note: the customer may order the same product for several times.
+//Others: sumBy, sum
 fun Customer.getTotalOrderPrice(): Double = orders.flatMap { it.products }.sumByDouble { it.price }
