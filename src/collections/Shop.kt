@@ -70,3 +70,13 @@ fun Customer.getTotalOrderPrice(): Double = orders.flatMap { it.products }.sumBy
 
 //Return a map of the customers living in each city
 fun Shop.groupCustomersByCity(): Map<City, List<Customer>> = customers.groupBy { it.city }
+
+//Return customers who have more undelivered orders than delivered
+fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
+    /*val (a, _) = customers.partition { it.orders.filter { it.isDelivered.not() }.count() > it.orders.filter { it.isDelivered }.count() }
+    return a.toSet()*/ //<- My solution
+    return customers.filter {
+        val (delivered, undelivered) = it.orders.partition { it.isDelivered }
+        delivered.size < undelivered.size
+    }.toSet()
+}
