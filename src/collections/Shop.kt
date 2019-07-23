@@ -67,3 +67,6 @@ fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer> = customers.sorted
 //Note: the customer may order the same product for several times.
 //Others: sumBy, sum
 fun Customer.getTotalOrderPrice(): Double = orders.flatMap { it.products }.sumByDouble { it.price }
+
+//Return a map of the customers living in each city
+fun Shop.groupCustomersByCity(): Map<City, List<Customer>> = customers.groupBy { it.city }
