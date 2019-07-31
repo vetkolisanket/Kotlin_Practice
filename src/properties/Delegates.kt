@@ -34,6 +34,5 @@ class EffectiveDate<R> : ReadWriteProperty<R, MyDate> {
     override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate) {
         timeInMillis = value.toMillis()
     }
-
-
+    
 }
