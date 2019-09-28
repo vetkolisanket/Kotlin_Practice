@@ -37,3 +37,15 @@ val fireSet = bigBoxOfCrayons
     .map { it.copy(label = "New!") }
     .take(5)
     .toSet()
+
+val fireSetSeq = bigBoxOfCrayons
+    .asSequence()
+    .filter { it.color in includedColors }
+    .map { it.copy(label = "New!") }
+    .take(5)
+    .toSet()
+
+fun main() {
+    println(fireSet)
+    println(fireSetSeq)
+}
