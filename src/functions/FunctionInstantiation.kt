@@ -15,6 +15,8 @@ val twoParameters: (String, Int) -> String = repeatFun
 val stringPlus: (String, String) -> String = String::plus
 val intPlus: Int.(Int) -> Int = Int::plus
 
+infix fun Int.plus(number: Int) = this + number
+
 /**
  * You can use either of repeatFun or twoParameters as an argument to runTransformation
  */
@@ -33,4 +35,5 @@ fun main() {
     println(intPlus.invoke(1, 1))
     println(intPlus(1, 2))
     println(2.intPlus(3)) // extension-like call
+    println(2 plus 3)
 }
